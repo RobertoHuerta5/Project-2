@@ -19,16 +19,12 @@
    
 
 //})
-async function fetchUserData() {
-    let userElement = document.getElementById("search");
-    let userInput = userElement.value
 
-    
-}
 
 
 async function fetchPictures() {
     let userElement = document.getElementById("search");
+    let userInput = userElement.value
     let response = await fetch ('https://api.giphy.com/v1/gifs/search?api_key=jhyk57hl0jKssBmDmNkgTtRpQN2KXtDN&q=sun&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips')
     let jsonGiphy = await (response.json())
     //console.log (jsonGiphy.data)
