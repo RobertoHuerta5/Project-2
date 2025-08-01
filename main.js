@@ -23,14 +23,14 @@
 
 
 async function fetchPictures() {
-    let userElement = document.getElementById("search");
-    let userInput = userElement.value
-    let response = await fetch ('https://api.giphy.com/v1/gifs/search?api_key=jhyk57hl0jKssBmDmNkgTtRpQN2KXtDN&q=sun&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips')
+    let userInput = document.getElementById("search").value ;
+    let response = await fetch (`https://api.giphy.com/v1/gifs/search?api_key=jhyk57hl0jKssBmDmNkgTtRpQN2KXtDN&q=${userInput}&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips`)
     let jsonGiphy = await (response.json())
     //console.log (jsonGiphy.data)
     let arraData = await (jsonGiphy.data)
 
     let resultPictures = document.getElementById("images");
+    resultPictures.innerHTML = ""
 
     for(let index = 0 ; index < arraData.length; index++){
         let img = document.createElement ("img");
@@ -41,8 +41,4 @@ async function fetchPictures() {
     }
 }
 
-    
-
-
-
-fetchPictures()
+document.getElementById("submit").addEventListener("click", fetchPictures)
