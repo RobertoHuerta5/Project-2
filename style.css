@@ -1,5 +1,16 @@
+nav{
+    background-color: rgb(255, 255, 255);
+}
+
+
+.grid-container {
+    margin-top: 20px;
+    display: grid;
+    place-items: center; /* Centers both horizontally and vertically */
+  }
+
 body{
-    background-color: rgb(66, 182, 237);
+    background-color: rgb(72, 147, 182);
 }
 
 
@@ -9,3 +20,11 @@ body{
     font-weight: 250px;
     font-style: normal;
   }
+
+#images{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+   
