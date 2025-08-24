@@ -5,10 +5,15 @@ nav{
 
 .grid-container {
     margin-top: 20px;
-    display: grid;
-    place-items: center; /* Centers both horizontally and vertically */
+    display: flex;
   }
-
+  @media screen and (max-width: 800px) { /* Adjust breakpoint as needed */
+    .grid-container {
+      display: block;
+      float: none;
+      width: 100%;
+    }
+  }
 body{
     background-color: rgb(72, 147, 182);
 }
