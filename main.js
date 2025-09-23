@@ -9,7 +9,7 @@ async function fetchPictures() {
 
     for(let index = 0 ; index < arraData.length; index++){
         let img = document.createElement ("img");
-        img.src = arraData[index].images.fixed_width.url;
+        img.src = arraData[index].images.fixed_height.url;
         resultPictures.append(img);
         console.log(arraData[index].images);
 
