@@ -5,15 +5,10 @@ nav{
 
 .grid-container {
     margin-top: 20px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
   }
-  @media screen and (max-width: 800px) { /* Adjust breakpoint as needed */
-    .grid-container {
-      display: block;
-      float: none;
-      width: 100%;
-    }
-  }
+  
 body{
     background-color: rgb(72, 147, 182);
 }
